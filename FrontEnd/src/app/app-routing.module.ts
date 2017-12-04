@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {RouterModule, Routes} from '@angular/router';
-import {FetchAllComponent} from './view/fetch-all/fetch-all.component';
+import { RouterModule, Routes } from '@angular/router';
+import { FetchAllComponent } from './view/fetch-all/fetch-all.component';
+import { SaveCustomerComponent } from './view/save-customer/save-customer.component';
 
 const routes: Routes = [
   {
@@ -13,10 +14,14 @@ const routes: Routes = [
     redirectTo: '/fetch-all',
     pathMatch: 'full'
   },
+  // {
+  //   path: '**',
+  //   redirectTo: '/fetch-all',
+  //   pathMatch: 'full'
+  // },
   {
-    path: '**',
-    redirectTo: '/fetch-all',
-    pathMatch: 'full'
+    path: 'savecustomer',
+    component: SaveCustomerComponent
   }
 ];
 
